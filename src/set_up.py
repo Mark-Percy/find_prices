@@ -1,6 +1,5 @@
-from src.main import init
+
 from src.ui_builder import build_gui as bg
-import threading
 
 def set_up_ui():
     
@@ -13,6 +12,3 @@ def set_up_ui():
     app.mainloop()
 
 set_up_ui()
-
-x = threading.Thread(target=init.main, args = "1")
-y = threading.Thread(target=init.main, args = "2")

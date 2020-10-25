@@ -1,4 +1,6 @@
 from tkinter import Tk, Button, Frame, Entry, Label, PhotoImage
+from src.main import init as begin
+
 
 class GuiFrame(Frame):
     def __init__(self, master= None):
@@ -13,7 +15,7 @@ class GuiFrame(Frame):
         self.search = Button(self,
             text="Search",
             fg="green",
-            command=self.search_txt)
+            command=self.search_web)
         
         self.quit = Button(self, 
             text="QUIT", fg="red",
@@ -26,7 +28,7 @@ class GuiFrame(Frame):
         self.quit.grid(row=2,column=0)
 
 
-    def search_txt(self):
-        search_term = self.input_item_txt.get()
-        print(search_term)
+    def search_web(self):
+        begin.search_web(self.input_item_txt.get())
+    
 
